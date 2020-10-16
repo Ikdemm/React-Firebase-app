@@ -6,13 +6,12 @@ import { compose } from 'recompose';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 
-import { Button } from 'react-bootstrap';
-import Form from 'react-bootstrap/Form';
+import { Button, Form } from 'react-bootstrap';
 
 const SignUpPage = () => (
   <div>
     <div className="container">
-      <h1>SignUp</h1>
+      <h1 className="page-title">SignUp</h1>
       <FirebaseContext.Consumer>
         {firebase => <SignUpForm firebase={firebase} />}
       </FirebaseContext.Consumer>
@@ -72,42 +71,42 @@ class SignUpFormBase extends Component {
 
     return (
       
-        <Form className="col-md-12" onSubmit={this.onSubmit}>
-          <Form.Group className="signup-form-group" controlId="signupUsername">
-            <Form.Control name="username"
-            value={username}
-            onChange={this.onChange}
-            type="text"
-            className="signup-form-input"
-            placeholder="Full Name" />
-          </Form.Group>
-          <Form.Group controlId="signupEmail">
-            <Form.Control name="email"
-            value={email}
-            onChange={this.onChange}
-            type="text"
-            placeholder="Email Address" />
-          </Form.Group>
-          <Form.Group controlId="signupPasswordOne">
-            <Form.Control name="passwordOne"
-            value={passwordOne}
-            onChange={this.onChange}
-            type="password"
-            placeholder="Password" />
-          </Form.Group>
-          <Form.Group controlId="signupPasswordTwo">
-            <Form.Control name="passwordTwo"
-            value={passwordTwo}
-            onChange={this.onChange}
-            type="password"
-            placeholder="Confirm Password" />
-          </Form.Group>
-          <Button variant="primary" disabled={isInvalid} type="submit">
-            Sign Up
-          </Button>
-  
-          {error && <p>{error.message}</p>}
-        </Form>
+      <Form className="col-md-12" onSubmit={this.onSubmit}>
+        <Form.Group className="signup-form-group" controlId="signupUsername">
+          <Form.Control name="username"
+          value={username}
+          onChange={this.onChange}
+          type="text"
+          className="signup-form-input"
+          placeholder="Full Name" />
+        </Form.Group>
+        <Form.Group controlId="signupEmail">
+          <Form.Control name="email"
+          value={email}
+          onChange={this.onChange}
+          type="text"
+          placeholder="Email Address" />
+        </Form.Group>
+        <Form.Group controlId="signupPasswordOne">
+          <Form.Control name="passwordOne"
+          value={passwordOne}
+          onChange={this.onChange}
+          type="password"
+          placeholder="Password" />
+        </Form.Group>
+        <Form.Group controlId="signupPasswordTwo">
+          <Form.Control name="passwordTwo"
+          value={passwordTwo}
+          onChange={this.onChange}
+          type="password"
+          placeholder="Confirm Password" />
+        </Form.Group>
+        <Button variant="primary" disabled={isInvalid} type="submit" className="submit-button">
+          Sign Up
+        </Button>
+
+        {error && <p>{error.message}</p>}
+      </Form>
     )
   }
 }

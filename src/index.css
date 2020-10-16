@@ -12,8 +12,29 @@ code {
     monospace;
 }
 
-.signup-form {
-  width: 100px;
+.page-title {
+  text-align: center;
+  margin: 1em;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5em;
+  margin-top: 3.5em;
+}
+
+body {
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+* {
+  font-family: 'Commissioner', sans-serif;
+}
+
+.submit-button {
+  margin: 1em 0;
 }
 
 /* .signup-form-group {

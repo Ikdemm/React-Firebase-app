@@ -6,10 +6,11 @@ import { SignUpLink } from '../SignUp';
 import { withFirebase } from '../Firebase';
 
 import * as ROUTES from '../../constants/routes';
+import { Button, Form } from 'react-bootstrap';
  
 const SignInPage = () => (
-  <div>
-    <h1>SignIn</h1>
+  <div className="container">
+    <h1 className="page-title">SignIn</h1>
     <SignInForm />
     <SignUpLink />
   </div>
@@ -54,27 +55,24 @@ class SignInFormBase extends Component {
     const isInvalid = password === '' || email === '';
  
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          name="email"
+      <Form onSubmit={this.onSubmit}>
+        <Form.Group className="signin-form-group" controlId="signinEmail">
+          <Form.Control name="email"
           value={email}
           onChange={this.onChange}
           type="text"
-          placeholder="Email Address"
-        />
-        <input
-          name="password"
+          placeholder="Email Address" />
+        </Form.Group>
+        <Form.Group className="signin-form-group" controlId="signinPassword">
+          <Form.Control name="password"
           value={password}
           onChange={this.onChange}
           type="password"
-          placeholder="Password"
-        />
-        <button disabled={isInvalid} type="submit">
-          Sign In
-        </button>
- 
+          placeholder="Password" />
+        </Form.Group>
         {error && <p>{error.message}</p>}
-      </form>
+        <Button disabled={isInvalid} type="submit" className="submit-button">Sign in</Button>
+      </Form>        
     );
   }
 }
