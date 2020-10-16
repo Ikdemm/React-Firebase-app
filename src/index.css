@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.signup-form {
+  width: 100px;
+}
+
+/* .signup-form-group {
+  max-width: 1000px;
+}
+
+.signup-form-input {
+  max-width: 1000px;
+} */
