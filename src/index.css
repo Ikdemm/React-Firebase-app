@@ -19,7 +19,7 @@ code {
 
 .container {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 30px;
   padding: 1.5em;
   margin-top: 3.5em;
 }
@@ -35,6 +35,39 @@ body {
 
 .submit-button {
   margin: 1em 0;
+}
+
+.landing-container {
+  text-align: center;
+  background-color: #cfd8dc;
+  margin-bottom: 4em;
+}
+
+.landing-title {
+  color: #fff;
+}
+
+.react {
+  color: #53c1dd;
+}
+
+.firebase {
+  color: #fda410;
+}
+
+.firebase:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.react:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.book-link {
+  text-decoration: none;
+  color: grey;
 }
 
 /* .signup-form-group {
